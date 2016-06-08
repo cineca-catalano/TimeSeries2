@@ -17,7 +17,7 @@ function build (opts, cb) {
   server.connection({ port: opts.port })
 
   server.register([
-    require('./lib/myplugin')
+    require('inert'),require('./lib/myplugin')
   ], (err) => {
     cb(err, server)
   })
